@@ -51,5 +51,18 @@ ol,ul,li { list-style:none; }
 .fa { display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 .fa-link:before {content: "\f0c1";}
 /*植德资讯*/
-
+.message{width: 8.4rem;min-height: 300px; margin:0 auto;overflow: hidden;padding-top: 1rem; padding-bottom: 0.666667rem;}
+.message ul{width: 49.5%;float: left;}
+.message ul li{margin-top: 0.266667rem;}
+.message ul li a{color: #76442F;font-size: 0.373333rem;}
+.message .mess_R{border-left:1px solid #efefef;}
+.message .mess_R li{padding-left: 0.266667rem;}
+.message .mess_L li{padding-right: 0.266667rem;}
+.mess_page{width: 100%;height: 1rem;text-align: center;margin-bottom: 0.666667rem;}
+.mess_page span{font-size: 0.373333rem;color: #76442F;line-height: 1rem;}
+/*职业机会*/
+.job{width: 8.666667rem;min-height: 268px;padding-top: 0.746667rem;margin: 0 auto;padding-bottom: 0.746667rem;}
+.job .job_headline{width: 100%;font-size: 0.48rem;color: #76442F;margin-top: 0.333333rem;}
+.job .showimg{width: 100%;margin-top: 0.5rem;}
+.job .showimg img{width: 100%;}
 /*-jcm-*/
