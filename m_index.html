@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=1" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/m_zhide.css">
+    <script type="text/javascript" src="js/jquery.1.10.2.js"></script>
+    <script type="text/javascript" src="js/flexible.debug.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/m_zhide.js"></script>
+	<title>首页</title>
+</head>
+<body>
+	<!-- header -->
+		<div class="header">
+			<div class="m_logo">
+				<a href="###">
+					<img src="images/logo_w.png">
+				</a>
+			</div>
+			<div class="navs">
+				<div class="nav_button">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- header end -->
+	<!-- content -->
+	<div class="content">
+		<!-- 导航框开始 -->
+		<ul class="nav">
+			<li><a href="###">首页</a></li>
+			<li><a href="###">关于植德</a></li>
+			<li><a href="###">专业人员</a></li>
+			<li><a href="###">业务领域</a></li>
+			<li><a href="###">植德咨询</a></li>
+			<li><a href="###">工作机会</a></li>
+			<li><a href="###">联系我们</a></li>
+		</ul>
+		<!-- 导航框结束 -->
+		<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+	            <div class="explanatoryNote">
+	            	<h6>体面</h6>
+	            	<p>员工体面、客户体面，让员工因在事务所工作而体面、让客户因我们的服务而体面</p>
+	            </div>
+            	<img src="images/m11_02.jpg">
+            </div>
+            <div class="swiper-slide">
+            	<div class="explanatoryNote">
+	            	<h6>专业</h6>
+	            	<p>以专业立足市场、用“匠人”精神做细致严谨但不失灵活与创新的法律服务</p>
+	            </div>
+            	<img src="images/m21_02.jpg">
+            </div>
+            <div class="swiper-slide">
+	            <div class="explanatoryNote">
+	            	<h6>友爱</h6>
+	            	<p>工作环境单纯、同事相处融洽、事务所多给予员工人文关怀</p>
+	            </div>
+            	<img src="images/m31_02.jpg">
+            </div>
+
+            	<div class="swiper-slide">
+	            	<div class="explanatoryNote">
+		            	<h6>进取</h6>
+		            	<p>合伙人积极勤奋、懂专业、不脱离一线；律师踏实专业、有干劲；事务所蒸蒸日上</p>
+		            </div>
+	            	<img src="images/m41_02.jpg">
+               </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Pagination -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+	<!-- Initialize Swiper -->
+   <script>
+     var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade',
+        autoplay: 3000,//可选选项，自动滑动
+        loop: true
+    });
+   $(".swiper-container").mouseenter(function () {
+              //滑过悬停
+              swiper.stopAutoplay();
+              //swiper 为上面你swiper实例化的名称
+            }).mouseleave(function(){
+            //离开开启
+              swiper.startAutoplay();
+  })
+    </script>
+	</div>
+	<!-- content end-->
+	<!-- footer-->
+	<div class="footer">
+		<span>版权所有</span>
+		<span>北京值德律师事务所</span>
+		<span>联系我们</span>
+	</div>
+	<!-- footer end-->
+</body>
+</html>

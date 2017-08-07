@@ -1,0 +1,55 @@
+/*值德手机端css*/
+*{margin: 0;padding:0;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:underline; }
+/*a:link { text-decoration:underline; }*/
+img { border:none; }
+ol,ul,li { list-style:none; }
+/*头部css*/
+.header{width: 100%;height: 1.866667rem;background: #C81432;overflow: hidden;}
+.header .m_logo{width: 8.666667rem;height: 1.866667rem;float: left;text-align: center; line-height:1.866667rem;}
+.header .navs{width: 1.333333rem;height: 1.866667rem;float: left;text-align: center;}
+.header .m_logo img{width: 3.653333rem;height: 0.906667rem;vertical-align: middle;line-height:height: 0.906667rem;margin-left: 1.4rem;}
+.header .navs .nav_button{width: 0.4rem;height: 0.426667rem;margin-left: 34%;margin-top:55%;}
+.nav_button ul li{width: 100%;height: 0.08rem;background: #e6e2e2;}
+.nav_button ul li:nth-child(2){margin-top: 0.066667rem;margin-bottom: 0.08rem;}
+/*导航*/
+.nav{width: 3.04rem;height: 3.04rem;position: absolute;z-index: 100;right: 0;display: none;}
+.nav li{width: 3.04rem;height: 1.12rem;background-color: #C4AE78;border-bottom: 0.026667rem solid #aaa;margin-top: 0px;text-indent: 0.7rem;}
+.nav li a{color: #fff;font-size: 0.373333rem;line-height: 1.12rem;}
+/*首页中部*/
+.swiper-slide img{height: 14.933333rem;}
+.swiper-button-next, .swiper-button-prev {background-size:30px 18px;width: 1.253333rem;height: 1.253333rem;background-repeat: no-repeat;background-color: black;opacity: .7;border-radius: 6px;}
+.test{width: 100px;height: 100px;background-color: red;position: absolute;top: 20px;left: 20px;}
+.explanatoryNote{width: 6.666667rem;height: 11.306667rem;position: absolute;left: 2.666667rem;top: 2.4rem;}
+.explanatoryNote h6{font-size: 1.066667rem;color: #C4AE78;font-weight: 200;}
+.explanatoryNote p{font-size: 0.533333rem;color: #C4AE78;font-weight: 200;}
+/*底部*/
+.footer{width: 100%;height: 0.933333rem;background-color: #C4AE78;margin-top: -0.06rem;}
+.footer span{color: #fff;line-height:0.933333rem; font-size: 0.426667rem;margin-right: 0.64rem;}
+.footer span:nth-child(1){margin-left: 0.533333rem;}
+/*关于植德*/
+.aboutZD{width: 8.666667rem;min-height: 268px;padding-top: 0.746667rem;margin: 0 auto;padding-bottom: 0.746667rem;}
+.aboutZD_headline{width: 100%;font-size: 0.426667rem;color: #76442F;margin-top: 0.333333rem;}
+.aboutZD_show{font-size: 0.373333rem;color: #666666;margin-top: 0.4rem;line-height: 0.586667rem;}
+/*专业人员*/
+.lawyer{width: 8.666667rem;min-height: 200px;margin: 0 auto;padding-bottom: 1.333333rem;}
+.lawyer .lawyer_headline{width: 100%;color: #76442F;font-size: 0.48rem;padding-top: 1.44rem;}
+.lawyer .lawyerList{width: 100%;}
+.lawyer .lawyerList li{text-align: center;margin-top: 1.066667rem;}
+.lawyer .lawyerList li img{width: 4.48rem;}
+.lawyer .lawyerList li h6{color: #76442F;font-size: 0.48rem;font-weight: normal;line-height: 1rem;}
+.lawyer .lawyerList li span{font-size: 0.426667rem; line-height: 0.4rem;color: #727171;display: block;text-align: center;}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.our_client h3{ color: #76442F;font-size: 16px;line-height: 26px;margin: 30px 0 10px 0;text-align: left;font-family: "Arial","Microsoft Yahei";}
+.fa { display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.fa-link:before {content: "\f0c1";}
+/*植德资讯*/
+
+/*-jcm-*/
