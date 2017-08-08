@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=1" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/m_zhide.css">
+    <script type="text/javascript" src="js/jquery.1.10.2.js"></script>
+    <script type="text/javascript" src="js/flexible.debug.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/m_zhide.js"></script>
+	<title>职业机会</title>
+</head>
+<body>
+	<!-- header -->
+		<div class="header">
+			<div class="m_logo"><div></div>
+				<a href="###">
+					<img src="images/logo_w.png">
+				</a>
+			</div>
+			<div class="navs">
+				<div class="nav_button">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- header end -->
+	<!-- content -->
+	<div class="content">
+		<!-- 导航框开始 -->
+		<ul class="nav">
+			<li><a href="###">首页</a></li>
+			<li><a href="###">关于植德</a></li>
+			<li><a href="###">专业人员</a></li>
+			<li><a href="###">业务领域</a></li>
+			<li><a href="###">植德咨询</a></li>
+			<li><a href="###">工作机会</a></li>
+			<li><a href="###">联系我们</a></li>
+		</ul>
+		<!-- 导航框结束 -->
+		<!-- 联系我们 -->
+		<div class="job">
+			<div class="job_headline">联系我们</div>
+			 <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+			  <div id="wrap" class="my-map">
+		        <div id="mapContainer"></div>
+		    </div>
+    		 <div class="callUS" style="margin-top: 1.333333rem;">
+				<h3></h3>
+				<ul>
+					<li>邮箱：hr@meritsandtree.com</li>
+					<li>地址：北京市东城区东直门南大街1号北京来福士中心办公楼5层</li>
+					<li>电话：010-56500900</li>
+					<li>传真：010-56500999</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+	!function(){
+        var infoWindow, map, level = 18,
+            center = {lng: 116.43264, lat: 39.940447},
+            features = [{type: "Marker", name: "北京来福士中心办公楼5层", desc: "植德律师事务所位置", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 116.432683, lat: 39.940455}}];
+
+        function loadFeatures(){
+            for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+                data = features[i];
+                switch(data.type){
+                    case "Marker":
+                        feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                            zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                            content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
+                        break;
+                    case "Polyline":
+                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                        }
+                        feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+                        break;
+                    case "Polygon":
+                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                        }
+                        feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                            fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+                        break;
+                    default: feature = null;
+                }
+                if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+            }
+        }
+
+        function mapFeatureClick(e){
+            if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+            var extData = e.target.getExtData();
+            infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+            infoWindow.open(map, e.lnglat);
+        }
+
+        map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+        new AMap.TileLayer.RoadNet({map: map, zIndex: 2});
+        new AMap.TileLayer.Traffic({map: map, zIndex: 3});
+        new AMap.Buildings({map: map, zIndex: 4});
+        loadFeatures();
+
+        map.on('complete', function(){
+            map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
+                map.addControl(new AMap.ToolBar);
+            map.addControl(new AMap.OverView);
+            map.addControl(new AMap.Scale);
+            });
+        })
+    }();
+		</script>
+		<!-- 联系我们 end-->
+	</div>
+	<!-- content end-->
+	<!-- footer-->
+	<div class="footer">
+		<span>版权所有</span>
+		<span>北京值德律师事务所</span>
+		<span>联系我们</span>
+	</div>
+	<!-- footer end-->
+</body>
+</html>
