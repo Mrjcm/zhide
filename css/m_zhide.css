@@ -76,13 +76,23 @@ ol,ul,li { list-style:none; }
 .recruit_require{display: none;}
 .outShow{border: 1px solid #fff;padding-bottom: 0.533333rem;}
 /*地图*/
-  .my-map { margin-top: 1.333333rem; width: 100%; height: 360px; }
-    .my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
-    .my-map .icon-cir { height: 31px; width: 28px; }
-    .my-map .icon-cir-red { background-position: -11px -5px; }
-    .amap-container{height: 100%;}
+.my-map { margin-top: 1.333333rem; width: 100%; height: 360px; }
+.my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+.my-map .icon-cir { height: 31px; width: 28px; }
+.my-map .icon-cir-red { background-position: -11px -5px; }
+.amap-container{height: 100%;}
 /*律师详情*/
 .lawyer_details{position: absolute;top: 34%;}
 .faL{display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 0.5rem;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;margin-left: 0.28rem;margin-top: 0.053333rem;}
 .fa-chevron-left:before {content: "\f053";}
+.lawyer_detailed{width: 8.533333rem;min-height: 300px;margin:0 auto;padding-top: 1rem;}
+.lawyer_head{width: 94%;height: 8.666667rem;background-color: #EFEFEF;overflow: hidden;padding-top: 0.533333rem;padding-left: 0.533333rem;}
+.lawyer_headL{width: 28%;height: 3rem; float: left;}
+.lawyer_headR{width: 63%;height: 3rem; float: left;margin-left: 0.266667rem;}
+.lawyer_headL .lawyer_pic{width: 100%;height: 3rem;background: url(../images/img_17072809244431999.jpg);background-size: 100% 100%;}
+.lawyerName{text-align: left;}
+.lawyerName span:nth-child(1){font-size: 0.533333rem;color: #76442F;font-weight: bold;}
+.lawyerName span:nth-child(2){font-size: 0.373333rem;color: #727171;display: inline-block;margin-left: 0.266667rem;}
+.lawyerInfo{font-size: 0.32rem;color: #76442F;line-height: 0.6rem;margin-top: 0.106667rem;}
+.lawyerInfo a{font-size: 0.32rem;line-height: 0.48rem;color: #76442F;display: inline-block;margin-left: 0.1rem;}
 /*-jcm-*/
