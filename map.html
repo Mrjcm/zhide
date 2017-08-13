@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-    <meta content="yes" name="apple-touch-fullscreen" />
-    <meta content="telephone=no,email=no" name="format-detection" />
-    <meta content="maximum-dpr=1" name="flexible" />
-    <meta content="modeName=750-12" name="grid" />
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="css/m_zhide.css">
-    <script type="text/javascript" src="js/jquery.1.10.2.js"></script>
-    <script type="text/javascript" src="js/flexible.debug.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/m_zhide.js"></script>
-	<title>职业机会</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="植德律师事务所位置,植德">
+    <meta name="description" content="植德律师事务所在地图上的实际位置">
+    <title>高德地图</title>
+<style>
+    body { margin: 0; font: 13px/1.5 "Microsoft YaHei", "Helvetica Neue", "Sans-Serif"; min-height: 960px; min-width: 600px; }
+    .my-map { margin: 0 auto; width: 700px; height: 360px; }
+    .my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+    .my-map .icon-cir { height: 31px; width: 28px; }
+    .my-map .icon-cir-red { background-position: -11px -5px; }
+    .amap-container{height: 100%;}
+</style>
 </head>
 <body>
-	<!-- header -->
-		<div class="header">
-			<div class="m_logo"><div></div>
-				<a href="m_index.html">
-					<img src="images/logo_w.png">
-				</a>
-			</div>
-			<div class="navs">
-				<div class="nav_button">
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	<!-- header end -->
-	<!-- content -->
-	<div class="content">
-		<!-- 导航框开始 -->
-		<ul class="nav">
-			<li><a href="m_index.html">首页</a></li>
-			<li><a href="m_aboutZD.html">关于植德</a></li>
-			<li><a href="m_professional.html">专业人员</a></li>
-			<li><a href="m_business.html">业务领域</a></li>
-			<li><a href="m_message.html">植德咨询</a></li>
-			<li><a href="m_job.html">工作机会</a></li>
-			<li><a href="m_callUs.html">联系我们</a></li>
-		</ul>
-		<!-- 导航框结束 -->
-		<!-- 联系我们 -->
-		<div class="job">
-			<div class="job_headline">联系我们</div>
-			 <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
-			  <div id="wrap" class="my-map">
-		        <div id="mapContainer"></div>
-		    </div>
-    		 <div class="callUS" style="margin-top: 1.333333rem;">
-				<h3></h3>
-				<ul>
-					<li>邮箱：hr@meritsandtree.com</li>
-					<li>地址：北京市东城区东直门南大街1号北京来福士中心办公楼5层</li>
-					<li>电话：010-56500900</li>
-					<li>传真：010-56500999</li>
-				</ul>
-			</div>
-		</div>
-		<script type="text/javascript">
-	!function(){
+    <div id="wrap" class="my-map">
+        <div id="mapContainer"></div>
+    </div>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+    <script>
+    !function(){
         var infoWindow, map, level = 18,
             center = {lng: 116.43264, lat: 39.940447},
             features = [{type: "Marker", name: "北京来福士中心办公楼5层", desc: "植德律师事务所位置", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 116.432683, lat: 39.940455}}];
@@ -122,16 +76,6 @@
             });
         })
     }();
-		</script>
-		<!-- 联系我们 end-->
-	</div>
-	<!-- content end-->
-	<!-- footer-->
-	<div class="footer">
-		<span>版权所有</span>
-		<span>北京值德律师事务所</span>
-		<span>联系我们</span>
-	</div>
-	<!-- footer end-->
+    </script>
 </body>
 </html>
