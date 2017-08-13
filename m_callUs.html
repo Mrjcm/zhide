@@ -52,9 +52,11 @@
 		<div class="job">
 			<div class="job_headline">联系我们</div>
 			 <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
-			  <div id="wrap" class="my-map">
+			   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8pSv6OwShlfZNew6tqxupFIfU6zZfG8y"></script>
+			<!--   <div id="wrap" class="my-map">
 		        <div id="mapContainer"></div>
-		    </div>
+		    </div> -->
+		     <div style="width:7.333333rem;height:9.6rem;border:#ccc solid 1px;font-size:12px" id="map"></div>
     		 <div class="callUS" style="margin-top: 1.333333rem;">
 				<h3></h3>
 				<ul>
@@ -66,62 +68,118 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-	!function(){
-        var infoWindow, map, level = 18,
-            center = {lng: 116.43264, lat: 39.940447},
-            features = [{type: "Marker", name: "北京来福士中心办公楼5层", desc: "植德律师事务所位置", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 116.432683, lat: 39.940455}}];
+	// !function(){
+ //        var infoWindow, map, level = 18,
+ //            center = {lng: 116.43264, lat: 39.940447},
+ //            features = [{type: "Marker", name: "北京来福士中心办公楼5层", desc: "植德律师事务所位置", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 116.432683, lat: 39.940455}}];
 
-        function loadFeatures(){
-            for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
-                data = features[i];
-                switch(data.type){
-                    case "Marker":
-                        feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
-                            zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
-                            content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
-                        break;
-                    case "Polyline":
-                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
-                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
-                        }
-                        feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
-                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
-                        break;
-                    case "Polygon":
-                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
-                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
-                        }
-                        feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
-                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
-                            fillColor: data.fillColor, fillOpacity: data.fillOpacity });
-                        break;
-                    default: feature = null;
-                }
-                if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
-            }
-        }
+ //        function loadFeatures(){
+ //            for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+ //                data = features[i];
+ //                switch(data.type){
+ //                    case "Marker":
+ //                        feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+ //                            zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+ //                            content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
+ //                        break;
+ //                    case "Polyline":
+ //                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+ //                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+ //                        }
+ //                        feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+ //                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+ //                        break;
+ //                    case "Polygon":
+ //                        for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+ //                            path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+ //                        }
+ //                        feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+ //                            strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+ //                            fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+ //                        break;
+ //                    default: feature = null;
+ //                }
+ //                if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+ //            }
+ //        }
 
-        function mapFeatureClick(e){
-            if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
-            var extData = e.target.getExtData();
-            infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
-            infoWindow.open(map, e.lnglat);
-        }
+ //        function mapFeatureClick(e){
+ //            if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+ //            var extData = e.target.getExtData();
+ //            infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+ //            infoWindow.open(map, e.lnglat);
+ //        }
 
-        map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
-        new AMap.TileLayer.RoadNet({map: map, zIndex: 2});
-        new AMap.TileLayer.Traffic({map: map, zIndex: 3});
-        new AMap.Buildings({map: map, zIndex: 4});
-        loadFeatures();
+ //        map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+ //        new AMap.TileLayer.RoadNet({map: map, zIndex: 2});
+ //        new AMap.TileLayer.Traffic({map: map, zIndex: 3});
+ //        new AMap.Buildings({map: map, zIndex: 4});
+ //        loadFeatures();
 
-        map.on('complete', function(){
-            map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
-                map.addControl(new AMap.ToolBar);
-            map.addControl(new AMap.OverView);
-            map.addControl(new AMap.Scale);
-            });
-        })
-    }();
+ //        map.on('complete', function(){
+ //            map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
+ //                map.addControl(new AMap.ToolBar);
+ //            map.addControl(new AMap.OverView);
+ //            map.addControl(new AMap.Scale);
+ //            });
+ //        })
+ //    }();
+
+ //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(116.439399,39.946198),19);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"植德律师事务所位置",title:"北京来福士中心办公楼5层",imageOffset: {width:0,height:3},position:{lat:39.946125,lng:116.438928}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
 		</script>
 		<!-- 联系我们 end-->
 	</div>
